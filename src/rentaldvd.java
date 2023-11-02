@@ -166,9 +166,14 @@ public class rentaldvd extends javax.swing.JFrame {
         labelDeposit = new javax.swing.JLabel();
         labelDenda = new javax.swing.JLabel();
         labelTotalBayar = new javax.swing.JLabel();
+        jPanel3 = new javax.swing.JPanel();
         jLabel3 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+
+        jTabbedPanel.setBackground(new java.awt.Color(0, 204, 255));
+
+        jPanel1.setBackground(new java.awt.Color(0, 153, 255));
 
         jLabel10.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         jLabel10.setText("No. Transaksi");
@@ -388,7 +393,7 @@ public class rentaldvd extends javax.swing.JFrame {
                             .addComponent(txtHargaSewa)))
                     .addComponent(jButton3)
                     .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 360, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(160, Short.MAX_VALUE))
+                .addContainerGap(151, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -459,10 +464,12 @@ public class rentaldvd extends javax.swing.JFrame {
                     .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE))
                 .addGap(18, 18, 18)
                 .addComponent(btnQuit)
-                .addContainerGap(94, Short.MAX_VALUE))
+                .addContainerGap(55, Short.MAX_VALUE))
         );
 
         jTabbedPanel.addTab("Transaksi", jPanel1);
+
+        jPanel2.setBackground(new java.awt.Color(0, 153, 255));
 
         jLabel21.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         jLabel21.setText("No. Transaksi");
@@ -556,7 +563,7 @@ public class rentaldvd extends javax.swing.JFrame {
                                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                     .addComponent(labelNo)
                                     .addComponent(labelNama))
-                                .addContainerGap(456, Short.MAX_VALUE))))))
+                                .addContainerGap(447, Short.MAX_VALUE))))))
         );
         jPanel2Layout.setVerticalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -601,34 +608,50 @@ public class rentaldvd extends javax.swing.JFrame {
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel29)
                     .addComponent(labelTotalBayar))
-                .addContainerGap(77, Short.MAX_VALUE))
+                .addContainerGap(38, Short.MAX_VALUE))
         );
 
         jTabbedPanel.addTab("Preview", jPanel2);
 
+        jPanel3.setBackground(new java.awt.Color(0, 153, 255));
+
         jLabel3.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
         jLabel3.setText("RENTAL DVD");
+
+        javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
+        jPanel3.setLayout(jPanel3Layout);
+        jPanel3Layout.setHorizontalGroup(
+            jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel3Layout.createSequentialGroup()
+                .addGap(373, 373, 373)
+                .addComponent(jLabel3)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+        jPanel3Layout.setVerticalGroup(
+            jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel3Layout.createSequentialGroup()
+                .addGap(38, 38, 38)
+                .addComponent(jLabel3)
+                .addContainerGap(45, Short.MAX_VALUE))
+        );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(387, 387, 387)
-                .addComponent(jLabel3)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-            .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jTabbedPanel)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jTabbedPanel)
+                    .addComponent(jPanel3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addContainerGap())
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addGap(32, 32, 32)
-                .addComponent(jLabel3)
-                .addGap(18, 18, 18)
-                .addComponent(jTabbedPanel, javax.swing.GroupLayout.DEFAULT_SIZE, 602, Short.MAX_VALUE)
+                .addComponent(jPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jTabbedPanel)
                 .addContainerGap())
         );
 
@@ -788,6 +811,7 @@ public class rentaldvd extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel30;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
+    private javax.swing.JPanel jPanel3;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JTabbedPane jTabbedPanel;
