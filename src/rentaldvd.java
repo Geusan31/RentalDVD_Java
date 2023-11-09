@@ -13,7 +13,7 @@ import javax.swing.table.DefaultTableModel;
 
 /**
  *
- * @author USER
+ * @author G E U S A N
  */
 public class rentaldvd extends javax.swing.JFrame {
 
@@ -684,17 +684,22 @@ public class rentaldvd extends javax.swing.JFrame {
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         // TODO add your handling code here:
-        int total = 0;
-        int deposit, denda, lama;
-        deposit = Integer.parseInt(txtDeposit.getText());
-        denda = Integer.parseInt(txtDenda.getText());
-        lama = Integer.parseInt(txtLamaPinjam.getText());
-        for(int i = 0; i < tabelData.getRowCount(); i++) {
-            int sewa = Integer.parseInt((String) tabelData.getValueAt(i, 3));
-            total = ((total + (sewa * lama) + denda) - deposit);
-            txtTotalBayar.setText(String.valueOf(total));
-            String AA = tabelData.getValueAt(i, 0) + "\t\t" + tabelData.getValueAt(i, 3) + "\n";
-            TextArea.append(AA);
+        if(txtNoTransaksi.getText().equals("") || txtNamaPelanggan.getText().equals("") || txtNoKTP.getText().equals("") || txtTanggalPinjam.getText().equals("") || txtTanggalKembali.getText().equals("") || txtLamaPinjam.getText().equals("") || txtDeposit.getText().equals("") || txtDenda.getText().equals("") || txtTotalBayar.getText().equals("")) {
+            JOptionPane.showMessageDialog(null, "DATA MASIH KOSONG");
+            txtNamaPelanggan.requestFocus();
+        } else {    
+            int total = 0;
+            int deposit, denda, lama;
+            deposit = Integer.parseInt(txtDeposit.getText());
+            denda = Integer.parseInt(txtDenda.getText());
+            lama = Integer.parseInt(txtLamaPinjam.getText());
+            for(int i = 0; i < tabelData.getRowCount(); i++) {
+                int sewa = Integer.parseInt((String) tabelData.getValueAt(i, 3));
+                total = ((total + (sewa * lama) + denda) - deposit);
+                txtTotalBayar.setText(String.valueOf(total));
+                String AA = tabelData.getValueAt(i, 0) + "\t\t" + tabelData.getValueAt(i, 3) + "\n";
+               TextArea.append(AA);
+            }
         }
     }//GEN-LAST:event_jButton1ActionPerformed
 
